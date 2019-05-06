@@ -1,0 +1,12 @@
+##### CUSTOM #####
+data/
+
+### JupyterNotebook ###
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
