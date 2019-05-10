@@ -27,8 +27,10 @@ dates=(
 	2018-05-09
 )
 
+mkdir -p data
+
 for date in "${dates[@]}"; do
-	curl -o listings_${date}.csv.gz http://data.insideairbnb.com/united-states/ca/san-francisco/${date}/data/listings.csv.gz
-	curl -o calendar_${date}.csv.gz http://data.insideairbnb.com/united-states/ca/san-francisco/${date}/data/calendar.csv.gz
-	curl -o reviews_${date}.csv.gz http://data.insideairbnb.com/united-states/ca/san-francisco/${date}/data/reviews.csv.gz
+	curl -o data/listings_${date}.csv.gz http://data.insideairbnb.com/united-states/ca/san-francisco/${date}/data/listings.csv.gz
+	curl -o data/calendar_${date}.csv.gz http://data.insideairbnb.com/united-states/ca/san-francisco/${date}/data/calendar.csv.gz
+	curl -o data/reviews_${date}.csv.gz http://data.insideairbnb.com/united-states/ca/san-francisco/${date}/data/reviews.csv.gz
 done
